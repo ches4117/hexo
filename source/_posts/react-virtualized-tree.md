@@ -4,7 +4,7 @@ date: 2019-08-01 23:44:29
 tags: ReactJS
 ---
   由於需要使用 tree 展示大量數據，而 [Ant Design](https://ant.design/docs/react/introduce-cn) 的 tree 在展示大量數據時，會導致畫面延遲，詳細重現以及解決方法可參考[該篇](https://blog.logrocket.com/rendering-large-lists-with-react-virtualized-82741907a6b3/)。
-
+<!--more-->
 ## 解決
   我一開始是想使用 Tree 的節點，將一定數量的節點摺疊起來，需要時再展開。雖然這樣可以暫時解決問題，但是並不美觀，而且在大量展開節點時依舊會十分緩慢。因此我試了以下幾種套件。
   1. [react-lazy-paginated-tree](https://github.com/venasolutions/react-lazy-paginated-tree)

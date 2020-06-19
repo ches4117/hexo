@@ -6,6 +6,7 @@ tags: ReactJS
 
 如果使用者在短時間內連續點擊頁面，使 Redux 連續取得資料並更新 props，導致頁面快速刷新。
 為了改善該問題，我去看幾間網站的做法，大部分都是將除了最後一個點擊之外的連線需求取消。
+<!--more-->
 
 ## 解決
 1. [dva issue](https://github.com/dvajs/dva/issues/1749)
