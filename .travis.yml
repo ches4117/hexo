@@ -1,29 +1,18 @@
-language: node_js
-
 sudo: false
-
+language: node_js
+node_js:
+  - 10 # use nodejs v10 LTS
+cache: npm
 branches:
   only:
-  - master
-
-cache:
-  - npm
-
-node_js:
-  - "10"
-
-before_script:
-  - npm install
-  - hexo cl
-
+    - master # build master branch only
 script:
-  - hexo generate
-
+  - hexo generate # generate static files
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GH_TOKEN
-  local-dir: public
-  keep-history: false
+  keep-history: true
   on:
     branch: master
+  local-dir: public
