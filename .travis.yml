@@ -7,7 +7,7 @@ cache:
     - node_modules
 
 before_install:
-  - export TZ=‘Asia/Taipei'
+  - export TZ='Asia/Taipei'
 
 install:
   - npm install hexo-cli -g
