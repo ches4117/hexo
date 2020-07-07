@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - lts/*
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - export TZ='Asia/Taipei'
+
+install:
+  - npm install hexo-cli -g
+  - npm install
+
+script:
+  - hexo g
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: public
+
+branches:
+  only:
+    - master # build master branch only
