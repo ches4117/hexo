@@ -10,7 +10,7 @@ cache:
 # 只检测 blog-source 上的代码提交
 branches:
   only:
-    - mater
+    - dev
 
 # install hexo & clone theme
 before_install:
