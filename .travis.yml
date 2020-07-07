@@ -16,13 +16,14 @@ branches:
 before_install:
   - export TZ='Asia/Taipei' # Set Timezone
   - npm install hexo-cli -g
-  - git clone https://github.com/theme-next/hexo-theme-next themes/next
+  - git clone -b dev https://github.com/Molunerfinn/hexo-theme-melody themes/melody
 
 # Start: Build Lifecycle
 install:
-  - npm install 
-  - npm install hexo-generator-search
-  - npm install hexo-generator-tag
+  - npm install
+  - npm install hexo-renderer-jade hexo-renderer-stylus --save # medoly 主题需要的插件
+  - npm install hexo-deployer-git --save # git 部署
+  - npm install hexo-generator-feed # RSS generate
 
 # 执行清缓存，生成网页操作
 script:
@@ -31,8 +32,8 @@ script:
 
 # 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
 after_script:
-  - git config user.name "${GH_USER}"
-  - git config user.email "${GH_EMAIL}"
+  - git config user.name "ches4117"
+  - git config user.email "ches4117@gmail.com"
   # 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
   - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
   - hexo deploy
