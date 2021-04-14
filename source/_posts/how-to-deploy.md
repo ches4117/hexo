@@ -4,13 +4,13 @@ date: 2021-01-12 22:06:54
 tags: git
 ---
 
-我目前公司的開發流程有點類似於 GitFlow，並且使用 Jenkins 部屬，目前主要是由我來部屬上版，也因此我花了不少時間在研究以及了解部屬流程。
+目前公司的開發流程有點類似於 GitFlow，使用 Jenkins 部屬，且主要是由我來部屬上版，也因此我花了不少時間在研究以及了解部屬流程。
 
 <!--more-->
 
 ## 介紹
 
-按照慣例，詳細我都不多說。我目前公司的開發流程相較於 GitFlow 少了 release 階段。有 Alpha 測試，Beta 測試，Gamma 測試，三個測試跑完之後才會部屬上 Demo 和 Production。
+我目前公司的開發流程相較於 GitFlow 少了 release 階段。有 Alpha 測試，Beta 測試，Gamma 測試，三個測試跑完之後才會部屬上 Demo 和 Production。
 
 - Alpha 測試使用 feature 分支，供前後端內部測試使用。測試完 merge 進去 develop。
 - Beta 測試使用 develop 分支，供 QA 和 PM 測試。測試完後 merge 進去 master。

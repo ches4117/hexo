@@ -81,3 +81,6 @@ deploy:
   type: git
   repo: https://github.com/ches4117/ches4117.github.io
   branch: master
+
+sitemap:
+  path: sitemap.xml
